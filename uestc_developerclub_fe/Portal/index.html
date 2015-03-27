@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>{$site_seo_title} {$site_name}</title>
+		<meta name="keywords" content="{$site_seo_keywords}" />
+		<meta name="description" content="{$site_seo_description}">
+        <meta property="qc:admins" content="3267607206266316110063757" />
+        <meta property="qc:admins" content="3267607677645654705234526367" />
+		<meta property="wb:webmaster" content="cc998baa09c9e5a8" />
+        <tc_include file="Public:head" />
+		<link href="__TMPL__Public/css/slippry/slippry.css" rel="stylesheet">
+		<style>
+			.caption-wraper{position: absolute;left:50%;bottom:2em;}
+			.caption-wraper .caption{
+			position: relative;left:-50%;
+			background-color: rgba(0, 0, 0, 0.54);
+			padding: 0.4em 1em;
+			color:#fff;
+			-webkit-border-radius: 1.2em;
+			-moz-border-radius: 1.2em;
+			-ms-border-radius: 1.2em;
+			-o-border-radius: 1.2em;
+			border-radius: 1.2em;
+			}
+			@media (max-width: 767px){
+				.sy-box{margin: 12px -20px 0 -20px;}
+				.caption-wraper{left:0;bottom: 0.4em;}
+				.caption-wraper .caption{
+				left: 0;
+				padding: 0.2em 0.4em;
+				font-size: 0.92em;
+				-webkit-border-radius: 0;
+				-moz-border-radius: 0;
+				-ms-border-radius: 0;
+				-o-border-radius: 0;
+				border-radius: 0;}
+			}
+		</style>
+	</head>
+<body class="body-white">
+<tc_include file="Public:nav" />
+
+
+<!-- ================原生动态导航===============-->
+
+<!-- <php>
+$home_slides=sp_getslide("portal_index");
+
+$home_slides=empty($home_slides)?$default_home_slides:$home_slides;
+</php> -->
+
+<!-- <ul id="homeslider" class="unstyled">
+    <foreach name="home_slides" item="vo">
+    <li>
+        <div class="caption-wraper">
+            <div class="caption">{$vo.slide_name}</div>
+        </div>
+        <a href="{$vo.slide_url}"><img src="{:sp_get_asset_upload_path($vo['slide_pic'])}" alt=""></a>
+    </li>
+    </foreach>
+</ul> -->
+
+
+ <!--=====================图片轮播=============-->
+    <!--=====================js_slider控制图片轮播,具体代码在文件尾部=============-->
+
+<div class="mala-slider" id="js-slider">
+        <ul class="mala-slide-list">
+            <!--=====================背景图片由mala-slider-item控制=============-->
+            <li class="mala-slide-item mala-fl" style="background-image: url(__TMPL__Public/images/malaimg/slide1.jpg);">
+                <div class="mala-container">
+                    <h3 class="mala-slide-title">《UESTC开发者俱乐部》即将开放</h3>
+                    <h4 class="mala-slide-subtitle">还等什么，赶快抢先体验吧</h4>
+                    <p class="mala-slide-cont">这是UESTC_2012/2013届开发者的俱乐部！
+                        <br>你可以在这里关注到“UESTC_2012/2013届开发者”的最新消息，以及收获更多IT知识和干货分享！
+                    </p>
+                    <a href="http://sxnzn.sinaapp.com/index.php?g=user&m=register&a=index" class="mala-btn mala-btn-primary mala-btn-larger">帐号注册</a>
+                </div>
+            </li>
+
+
+            <li class="mala-slide-item mala-fl" style="background-image: url(__TMPL__Public/images/malaimg/slide2.jpg);">
+                <div class="mala-container">
+                    <h3 class="mala-slide-title">《UESTC开发者俱乐部》公开招募小伙伴</h3>
+                    <h4 class="mala-slide-subtitle">感兴趣吗？还不快准备好你的简历</h4>
+                    <p class="mala-slide-cont">在这里，你可以找到志同道合的兄弟姐妹们！
+                        <br>只要你有激情，有梦想，有责任心，我们都将欢迎你！
+                    </p>
+                    <a href="http://sxnzn.sinaapp.com/index.php?g=user&m=register&a=index" class="mala-btn mala-btn-primary mala-btn-larger">加入我们</a>
+                </div>
+            </li>        
+        </ul>
+</div>
+
+
+
+<!--===========通知栏=============-->
+    <div class="mala-notice">
+        <div class="mala-container mala-clearfix">
+            <div class="mala-fl"> <i class="fa fa-volume-up"></i>正在试营阶段，期待你的加入！</div>
+            <div class="mala-fr"> <i class="fa fa-envelope-o"></i>daijiale@developerclub.cn <i class="fa fa-paw" style="margin-left:10px;"></i>LastUpdate 2015.3.4</div>
+        </div>
+    </div>
+    <!--==============主体内容========-->
+<div class="mala-main">
+        <div class="mala-container mala-clearfix">
+            <figure class="mala-figure">
+                <!--产品特点-->
+                <div class="mala-service-list">
+                    <div class="mala-row">
+                        <div class="mala-col-md-4">
+                            <div class="mala-service-item">
+                                <span class="mala-service-img"><i class="fa fa-cloud"></i>
+                                </span>
+                                <h4 class="mala-service-title">内部平台</h4>
+                                <span class="mala-service-desc">UESTC_Developers的专属平台</span>
+                            </div>
+                        </div>
+                        <div class="mala-col-md-4">
+                            <div class="mala-service-item">
+                                <span class="mala-service-img"><i class="fa fa-calendar-o"></i>
+                                </span>
+                                <h4 class="mala-service-title">Bug反馈</h4>
+                                <span class="mala-service-desc">分享你的难点，大家一起解决</span>
+                            </div>
+                        </div>
+                        <div class="mala-col-md-4">
+                            <div class="mala-service-item">
+                                <span class="mala-service-img"><i class="fa fa-search"></i>
+                                </span>
+                                <h4 class="mala-service-title">结队创作</h4>
+                                <span class="mala-service-desc">在这里寻觅你的校友搭档</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </figure>
+        </div>
+        
+        <div class="mala-container mala-clearfix">
+            <figure class="mala-figure">
+                <!--产品特点2-->
+                <div class="mala-service-list">
+                    <div class="mala-row">
+                        <div class="mala-col-md-4">
+                            <div class="mala-service-item">
+                                <span class="mala-service-img"><i class="fa fa-comment"></i>
+                                </span>
+                                <h4 class="mala-service-title">技术交流</h4>
+                                <span class="mala-service-desc">在这里，有来自各大神们的技术干货分享噢</span>
+                            </div>
+                        </div>
+                        <div class="mala-col-md-4">
+                            <div class="mala-service-item">
+                                <span class="mala-service-img"><i class="fa fa-eye"></i>
+                                </span>
+                                <h4 class="mala-service-title">灵感汇聚</h4>
+                                <span class="mala-service-desc">俗话说的好，三个臭皮匠顶个诸葛亮</span>
+                            </div>
+                        </div>
+                        <div class="mala-col-md-4">
+                            <div class="mala-service-item">
+                                <span class="mala-service-img"><i class="fa fa-group"></i>
+                                </span>
+                                <h4 class="mala-service-title">关于我们</h4>
+                                <span class="mala-service-desc">一群呆萌友爱的极客，欢迎新的小鲜肉加入噢</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </figure>
+        </div>
+    </div>
+
+<!--================内容模块页====================-->
+
+            
+<!--   最新咨询模块       -->
+	<!-- <div>
+		<h1 class="text-center">最新资讯</h1>
+		<h3 class="text-center">Last News</h3>
+	</div>
+	<php>
+		$lastnews=sp_sql_posts("cid:$portal_index_lastnews;field:post_title,post_excerpt,tid,smeta;order:listorder asc;limit:4;"); 
+	</php>
+	<div class="row">
+		<foreach name="lastnews" item="vo">
+		<php>$smeta=json_decode($vo['smeta'],true);</php>
+		<div class="span3">
+			<div class="tc-gridbox">
+				<div class="header">
+					<div class="item-image">
+						<a href="{:leuu('article/index',array('id'=>$vo['tid']))}">
+							<if condition="empty($smeta['thumb'])"> 
+								<img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}"/>
+							<else /> 
+								<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive img-thumbnail" alt="{$vo.post_title}" />
+							</if>
+						</a>
+					</div>
+					<h3><a href="{:leuu('article/index',array('id'=>$vo['tid']))}">{$vo.post_title}</a></h3>
+					<hr>
+				</div>
+				<div class="body">
+					<p><a href="{:leuu('article/index',array('id'=>$vo['tid']))}">{:msubstr($vo['post_excerpt'],0,32)}</a></p>
+				</div>
+			</div>
+		</div>
+		</foreach>
+	</div> -->
+
+   
+        <div class="mids-panel-heading mids-clearfix center">
+            <h3 class="mids-panel-title">俱乐部特色</h3>
+        </div>
+
+         <!-- 时间轴模块 -->
+        <section id="cd-timeline" class="cd-container">
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-picture">
+                <img src="__TMPL__Public/images/timeline/cd-icon-location.svg" alt="Location">
+            </div> <!-- cd-timeline-img -->
+            <div class="cd-timeline-content">
+                <h2><b>原创大神心得</b></h2>
+                <p>在这里，你可以看到<b>各届UESTC年级大神</b>亲笔撰写的成长心得！</p>
+                <img src="__TMPL__Public/images/timeline/jike.jpg" alt="UESTC DC大神心得">
+                <br></br>
+                <a href="http://www.developerclub.cn/index.php?m=list&a=index&id=2" class="cd-read-more">传送门</a>
+                <span class="cd-date"><b>即将上线，敬请期待</b></span>
+            </div> <!-- cd-timeline-content -->
+        </div> <!-- cd-timeline-block -->
+
+       <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-movie">               
+                <img src="__TMPL__Public/images/timeline/cd-icon-movie.svg" alt="Movie">
+            </div> <!-- cd-timeline-img -->
+            <div class="cd-timeline-content">
+                <h2><b>技术干货分享</b></h2>
+                <p>这里有UESTC各路开发者所提供的各类<b>原创/收集</b>的技术博文，包括“Web前后端、Android/IOS移动开发、视觉/交互设计”等等丰富资源</p>
+               <img src="__TMPL__Public/images/timeline/jishuziyuanfengxiang.png" alt="UESTC DC技术分享">
+               <br></br>
+                <a href="http://www.developerclub.cn/index.php?m=list&a=index&id=5" class="cd-read-more">传送门</a>
+                <span class="cd-date"><b>2015.2.14 新功能</b></span>
+            </div> <!-- cd-timeline-content -->
+        </div> <!-- cd-timeline-block -->
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-location">
+                <img src="__TMPL__Public/images/timeline/cd-icon-picture.svg" alt="Picture">
+            </div> <!-- cd-timeline-img -->            
+            <div class="cd-timeline-content">
+                <h2><b>点赞、个人收藏</b></h2>
+                <p>全站文章支持<b>点赞</b>和<b>收藏</b>，登录之后，在用户的个人中心页面可以查看到自己收藏的所有本站精彩文章，方便各位小伙伴们<b>Mark！</b></p>
+               <img src="__TMPL__Public/images/timeline/shoucang.jpg" alt="UESTC DC个人收藏">
+               <br></br>
+                <a href="http://www.developerclub.cn/index.php?m=list&a=index&id=5" class="cd-read-more">传送门</a>
+                <span class="cd-date"><b>2015.2.10 新功能</b></span>
+            </div> <!-- cd-timeline-content -->
+        </div> <!-- cd-timeline-block -->
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-movie">
+                <img src="__TMPL__Public/images/timeline/cd-icon-location.svg" alt="Location">
+            </div> <!-- cd-timeline-img -->            
+            <div class="cd-timeline-content">
+                <h2><b>点评交流</b></h2>
+                <p>登陆俱乐部之后，你可以自由点评所有文章，回复其他小伙伴，充分展示你的<b>见解</b></p>
+               <img src="__TMPL__Public/images/timeline/dianping.jpg" alt="UESTC DC点评交流">
+               <br></br>
+                <a href="http://www.developerclub.cn/index.php?g=user&m=login&a=index" class="cd-read-more">传送门</a>
+                <span class="cd-date"><b>2015.2.6 新功能</b></span>
+            </div> <!-- cd-timeline-content -->
+        </div> <!-- cd-timeline-block -->
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-picture">
+                <img src="__TMPL__Public/images/timeline/cd-icon-picture.svg" alt="Picture">
+            </div> <!-- cd-timeline-img -->
+            <div class="cd-timeline-content">
+                <h2><b>网罗各大社交分享平台</b></h2>
+                <p>你可以将喜欢的文章<b>一键分享</b>至<b>“微信，新浪微博，百度云，QQ空间，人人网，百度贴吧，QQ好友，有道云笔记，开心网”</b>等大型社交平台上，让你的朋友们也来mark一下吧！</p>
+                <img src="__TMPL__Public/images/timeline/fenxiang.jpg" alt="UESTC DC社交化分享">
+                <!-- <a href="#0" class="cd-read-more">Read more</a> -->
+                <span class="cd-date"><b>2015.1.26 新功能</b></span>
+            </div> <!-- cd-timeline-content -->
+        </div> <!-- cd-timeline-block -->
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-movie">
+                <img src="__TMPL__Public/images/timeline/cd-icon-movie.svg" alt="Movie">
+            </div> <!-- cd-timeline-img -->
+            <div class="cd-timeline-content">
+                <h2><b>全站响应式布局</b></h2>
+                <p>全站页面完美适配<b>PC、智能手机、TV、平板电脑</b>等各种设备，让你享受友好的视觉体验！</p>
+                <img src="__TMPL__Public/images/timeline/xiangyingshi1.png" alt="UESTC DC响应式布局">
+                <!-- <a href="#0" class="cd-read-more">Read more</a> -->
+                <span class="cd-date"><b>2015.1.18 新功能</b></span>
+            </div> <!-- cd-timeline-content -->
+        </div> <!-- cd-timeline-block -->
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-location">
+                <img src="__TMPL__Public/images/timeline/cd-icon-location.svg" alt="Location">
+            </div> <!-- cd-timeline-img -->
+            <div class="cd-timeline-content">
+                <h2><b>第三方帐号登录</b></h2>
+                <p>支持QQ第三方帐号登录，<b>无需注册，1秒登录</b>，即刻加入！</p>
+                <!-- <a href="#0" class="cd-read-more">Read more</a> -->
+                <img src="__TMPL__Public/images/timeline/disanfangdenglu.png" alt="UESTC DC第三方登录">
+                <span class="cd-date"><b>2015.1.6 新功能</b></span>
+            </div> <!-- cd-timeline-content -->
+        </div> <!-- cd-timeline-block -->
+
+        
+
+    </section> <!-- cd-timeline -->
+
+    <div class="mids-figure">
+                <div class="mids-panel">
+                    <div class="mids-panel-heading mids-clearfix center">
+                        <h3 class="mids-panel-title">贡献者</h3>
+                    </div>
+                    <div class="mids-panel-body">
+                        <div class="mids-grid-list">
+                            <div class="mids-row"> 
+
+                                <div id="effect-4">
+                                    <div class="two-col col-row clearfix"> 
+                                        <div class="col col-1-2">                                
+                                        <figure>
+                                        <img src="__TMPL__Public/images/groups/zx.jpg" alt="">
+                                        <figcaption>
+                                            <h3>Jessica</h3>
+                                            <span>产品策划</span>
+                                           
+                                        <a href="#" class="close-caption hidden">x</a>
+                                        </figcaption>
+                                        </figure>
+                            
+                                    </div>
+
+                                    <div class="col col-1-2">                                
+                                    <figure>
+                                    <img src="__TMPL__Public/images/groups/djl1.jpg" alt="">
+                                    <figcaption>
+                                        <h3>Dancer小枫</h3>
+                                        <span>项目发起者</span>
+                                        <span>前端开发总负责人</span>
+                                        <span>前端设计师</span>
+                                        <span>php后端开发总负责人</span>
+                                        <span>云平台维护负责人</span>
+                                        <a href="#" class="close-caption hidden">x</a>
+                                    </figcaption>
+                                    </figure>
+                                    </div>
+                                     
+                                    <div class="col col-1-2">                                
+                                    <figure>
+                                    <img src="__TMPL__Public/images/groups/wy1.jpg" alt="">
+                                    <figcaption>
+                                        <h3>Axl胖哥</h3>
+                                        <span>后端数据分析总负责人</span>
+                                        <span>数据库管理</span>
+                                        <span>后台内容管理</span>
+                                        <a href="#" class="close-caption hidden">x</a>
+                                    </figcaption>
+                                    </figure>
+                                    </div>      
+                                   </div>
+                            </div>
+
+                            
+                                <div class="two-col col-row clearfix">
+                                    <div id="effect-4">
+                                        <div class="col col-1-2">                                
+                                        <figure>
+                                        <img src="__TMPL__Public/images/groups/zhouchengguang.jpg" alt="">
+                                        <figcaption>
+                                            <h3>晨光</h3>
+                                            <span>站点视觉设计师</span>
+                                            <span>技术分享_运营模块负责人</span>                                    
+                                            <a href="#" class="close-caption hidden">x</a>
+                                        </figcaption>
+                                        </figure>
+                                        </div>
+                                    
+                                        <div class="col col-1-2">                                
+                                        <figure>
+                                        <img src="__TMPL__Public/images/groups/cuiwei.jpg" alt="">
+                                        <figcaption>
+                                            <h3>Ceven</h3>
+                                            <span>产品策划</span>
+                                            <span>Bug测试</span>                                      
+                                            <a href="#" class="close-caption hidden">x</a>
+                                        </figcaption>
+                                        </figure>
+                                        </div> 
+                                    </div>
+
+                                    <div id="effect-2">
+                                        <div class="col col-1-2">                                
+                                        <figure>
+                                        <img src="__TMPL__Public/images/groups/join1.jpg" alt="">
+                                        <figcaption>
+                                            <h3>联系方式</h3>
+                                            <span>Email：daijiale@developerclub.cn</span>
+                                            <span>Tel：18380471766</span> 
+                                            <span>QQ群：369506502</span>                                                        
+                                            <a href="#" class="close-caption hidden">x</a>
+                                        </figcaption>
+                                        </figure>
+                                        </div> 
+                                    </div>
+                                </div>        
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </div>
+    <tc_include file="Public:footer"/>
+
+</div>
+
+<tc_include file="Public:scripts"/>
+
+<!-- <script src="__TMPL__Public/js/slippry.min.js"></script>
+<script>
+$(function() {
+    var demo1 = $("#homeslider").slippry({
+        transition: 'fade',
+        useCSS: true,
+        captions: false,
+        speed: 1000,
+        pause: 3000,
+        auto: true,
+        preload: 'visible'
+    });
+});
+</script> -->
+
+
+
+
+
+</body>
+</html>

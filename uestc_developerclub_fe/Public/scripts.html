@@ -1,0 +1,68 @@
+<script type="text/javascript">
+//全局变量
+var GV = {
+    DIMAUB: "__ROOT__/",
+    JS_ROOT: "statics/js/",
+    TOKEN: ""
+};
+</script>
+<!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="__ROOT__/statics/js/jquery.js"></script>
+    <script src="__ROOT__/statics/js/wind.js"></script>
+    <script src="__TMPL__Public/simpleboot/bootstrap/js/bootstrap.min.js"></script>
+    <script src="__ROOT__/statics/js/frontend.js"></script>
+    <script src="__TMPL__Public/js/modernizr.js"></script>
+    <script src="__TMPL__Public/js/jquery.1.11.1.js"></script>
+    <script src="__TMPL__Public/js/main.js"></script> <!-- Resource jQuery -->
+	<script src="__TMPL__Public/js/touch.js"></script>
+	<script src="__TMPL__Public/js/jquery.glide.js"></script>
+    <!--控制轮播图片切换代码，引用的js为jquery.glide.js-->
+    <script>
+    $('#js-slider').glide();                    
+    </script>
+    <script>
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cdiv style='display:none;' %3E %3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fa04bc642fb15cb6b591f8fe5423f1bc2' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+	
+	<script>
+	$(function(){
+		$('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); });
+		
+		;(function($){
+			$.fn.totop=function(opt){
+				var scrolling=false;
+				return this.each(function(){
+					var $this=$(this);
+					$(window).scroll(function(){
+						if(!scrolling){
+							var sd=$(window).scrollTop();
+							if(sd>100){
+								$this.fadeIn();
+							}else{
+								$this.fadeOut();
+							}
+						}
+					});
+					
+					$this.click(function(){
+						scrolling=true;
+						$('html, body').animate({
+							scrollTop : 0
+						}, 500,function(){
+							scrolling=false;
+							$this.fadeOut();
+						});
+					});
+				});
+			};
+		})(jQuery); 
+		
+		$("#backtotop").totop();
+		
+		
+	});
+	</script>
+

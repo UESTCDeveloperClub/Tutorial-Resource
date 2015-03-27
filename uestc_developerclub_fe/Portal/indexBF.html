@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<!-- <title>{$site_seo_title} {$site_name}</title> -->
+		<title>师兄你真牛</title>
+		<meta name="keywords" content="{$site_seo_keywords}" />
+		<meta name="description" content="{$site_seo_description}">
+
+
+		<tc_include file="Public:head" />
+
+
+
+	</head>
+
+
+
+<!-- <body class="body-white">
+<tc_include file="Public:nav" />
+
+<php>
+$home_slides=sp_getslide("portal_index");
+
+$home_slides=empty($home_slides)?$default_home_slides:$home_slides;
+</php> -->
+
+<body>
+ <!--=============================导航栏================================-->
+    <header id="js-header" class="mala-header">
+        <div class="mala-clearfix mala-container">
+        <!--=============================右侧的个人中心================-->
+            <a href="mala-0101.html" class="mala-logo mala-fl"></a>
+            <div class="mala-user-info mala-fr js-header-dropmenu">
+<!--                 <span class="mala-username">Hi, User!<i class="mala-arrow mala-arrow-down  mala-ml"></i>
+                </span> -->
+                <!--=====================js/common.js中控制下拉菜单========-->
+<!--                 <ul class="mala-header-dropdown-list js-header-list">
+                    <li class="mala-header-dropdown-item"><a href="mala-0202.html" class="mala-link">个人中心</a>  <i class="mala-arrow mala-arrow-up" style="right:10px;"></i>
+                    </li>
+                    <li class="mala-header-dropdown-item"><a href="mala-0202.html" class="mala-link">退出</a>
+                    </li>
+                </ul>
+                 -->
+<!-- <ul class="nav pull-right" id="main-menu-left">
+			<li class="dropdown">
+			<if condition="sp_is_user_login()">
+	            <a class="dropdown-toggle user" data-toggle="dropdown" href="#">
+	            <if condition="empty($user['avatar'])">
+	            <img src="__TMPL__/Public/images/headicon.png" class="headicon"/>
+	            <else/>
+	            <img src="{:sp_get_user_avatar_url($user['avatar'])}" class="headicon"/>
+	            </if>
+	            {$user.user_nicename}<b class="caret"></b></a>
+	            <ul class="dropdown-menu pull-right">
+	               <li><a href="{:u('user/center/index')}"><i class="fa fa-user"></i> &nbsp;个人中心</a></li>
+	               <li class="divider"></li>
+	               <li><a href="{:u('user/index/logout')}"><i class="fa fa-sign-out"></i> &nbsp;退出</a></li>
+	            </ul>
+	        <else/>
+	            <a class="dropdown-toggle user" data-toggle="dropdown" href="#">
+	           		<img src="__TMPL__/Public/images/headicon.png" class="headicon"/>登录<b class="caret"></b>
+	            </a>
+	            <ul class="dropdown-menu pull-right">
+	               <li><a href="{:U('api/oauth/login',array('type'=>'sina'))}"><i class="fa fa-weibo"></i> &nbsp;微博登录</a></li>
+	               <li><a href="{:U('api/oauth/login',array('type'=>'qq'))}"><i class="fa fa-qq"></i> &nbsp;QQ登录</a></li>
+	               <li><a href="{:u('user/login/index')}"><i class="fa fa-sign-in"></i> &nbsp;登录</a></li>
+	               <li class="divider"></li>
+	               <li><a href="{:u('user/register/index')}"><i class="fa fa-user"></i> &nbsp;注册</a></li>
+	            </ul>
+	        </if>
+          	</li>
+</ul>
+ -->
+
+
+
+            </div>
+
+
+            <!--=====================mala-avatar控制头像=============-->
+<!--             <span class="mala-avatar mala-fr">
+                <img src="__TMPL__Public/mala/images/demo-photo.jpg">
+            </span> -->
+            <!--=====================导航栏中间的4个按钮=============-->
+            <nav class="mala-fr">
+                <ul class="mala-nav-list mala-clearfix">
+                    <li class="mala-nav-item mala-fl"> <a href="mala-0101.html" class="mala-nav-link">首页</a> 
+                    </li>
+                    <li class="mala-nav-item mala-fl js-header-dropmenu">
+                        <span class="mala-nav-link">师兄创意汇<i class="mala-arrow mala-arrow-down  mala-ml"></i>
+                        </span>
+                        <ul class="mala-header-dropdown-list js-header-list">
+                            <li class="mala-header-dropdown-item"> <a href="mala-0101.html" class="mala-link">最新师兄作品</a>  <i class="mala-arrow mala-arrow-up" style="right:20px;"></i> 
+                            </li>
+                            
+                            
+                            <li class="mala-header-dropdown-item"> <a href="mala-0101.html" class="mala-link">最热师兄作品</a> 
+                            </li>
+                            
+                            <!--这里没有设置弹窗效果，如果需要，请参考mala-0205.html页面-->
+                            <li class="mala-header-dropdown-item"> <a href="mala-0205.html" class="mala-link">校区师兄作品</a> 
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <!-- 找人请先登录，判断session自动弹出登录框 -->
+                     <li class="mala-nav-item mala-fl js-header-dropmenu">
+                        <span class="mala-nav-link">有事找师兄<i class="mala-arrow mala-arrow-down  mala-ml"></i>
+                        </span>
+                        <ul class="mala-header-dropdown-list js-header-list">
+                            <li class="mala-header-dropdown-item"> <a href="mala-0101.html" class="mala-link">我要拜师</a>  <i class="mala-arrow mala-arrow-up" style="right:20px;"></i> 
+                            </li>
+                            
+                            
+                            <li class="mala-header-dropdown-item"> <a href="mala-0101.html" class="mala-link">我要Join Team</a> 
+                            </li>
+                            
+                            
+                            <li class="mala-header-dropdown-item"> <a href="mala-0101.html" class="mala-link">我要招募小伙伴</a> 
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="mala-nav-item mala-fl"> <a href="mala-0101.html" class="mala-nav-link">关于我们</a> 
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--=====================图片轮播=============-->
+    <!--=====================js_slider控制图片轮播,具体代码在文件尾部=============-->
+    <div class="mala-slider" id="js-slider">
+        <ul class="mala-slide-list">
+            <!--=====================背景图片由mala-slider-item控制=============-->
+            <li class="mala-slide-item mala-fl" style="background-image: url(__TMPL__Public/mala/images/slide1.jpg);">
+                <div class="mala-container">
+                    <h3 class="mala-slide-title">《师兄你真牛Beta版》即将开放</h3>
+                    <h4 class="mala-slide-subtitle">还等什么，赶快抢先体验吧</h4>
+                    <p class="mala-slide-cont">师兄你真牛是一个神器的网站！
+                        <br>这不仅是大学生自己的github，还是大学生自己的社交website！
+                    </p>
+                    <a href="#" class="mala-btn mala-btn-primary mala-btn-larger">帐号注册</a>
+                </div>
+            </li>
+
+
+            <li class="mala-slide-item mala-fl" style="background-image: url(__TMPL__Public/mala/images/slide2.jpg);">
+                <div class="mala-container">
+                    <h3 class="mala-slide-title">《师兄你真牛》团队公开招募小伙伴</h3>
+                    <h4 class="mala-slide-subtitle">感兴趣吗？还不快准备好你的简历</h4>
+                    <p class="mala-slide-cont">在“师兄你真牛”这里，你可以找到志同道合的兄弟姐妹们！
+                        <br>只要你有激情，有梦想，有责任心，我们都将欢迎你！
+                    </p>
+                    <a href="#" class="mala-btn mala-btn-primary mala-btn-larger">加入我们</a>
+                </div>
+            </li>
+        
+
+
+        </ul>
+    </div>
+    <!--===========通知栏=============-->
+    <div class="mala-notice">
+        <div class="mala-container mala-clearfix">
+            <div class="mala-fl"> <i class="fa fa-volume-up"></i>暂时还没想好写什么</div>
+            <div class="mala-fr"> <i class="fa fa-envelope-o"></i> hr_service@shixiongnizhenniu.wang <i class="fa fa-paw" style="margin-left:10px;"></i>Update 2014.12.22</div>
+        </div>
+    </div>
+    <!--==============主体内容========-->
+    <div class="mala-main">
+        <div class="mala-container mala-clearfix">
+            <figure class="mala-figure">
+                <!--产品特点-->
+                <div class="mala-service-list">
+                    <div class="mala-row">
+                        <div class="mala-col-md-4">
+                            <div class="mala-service-item">
+                                <span class="mala-service-img"><i class="fa fa-plane"></i>
+                                </span>
+                                <h4 class="mala-service-title">QA测试服务化集合</h4>
+                                <span class="mala-service-desc">一站式测试服务体验</span>
+                            </div>
+                        </div>
+                        <div class="mala-col-md-4">
+                            <div class="mala-service-item">
+                                <span class="mala-service-img"><i class="fa fa-shield"></i>
+                                </span>
+                                <h4 class="mala-service-title">QA测试服务化集合</h4>
+                                <span class="mala-service-desc">一站式测试服务体验</span>
+                            </div>
+                        </div>
+                        <div class="mala-col-md-4">
+                            <div class="mala-service-item">
+                                <span class="mala-service-img"><i class="fa fa-tasks"></i>
+                                </span>
+                                <h4 class="mala-service-title">QA测试服务化集合</h4>
+                                <span class="mala-service-desc">一站式测试服务体验</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </figure>
+        </div>
+    </div>
+
+<!--================内容模块页====================-->
+
+ <div class="mids-figure">
+                <div class="mids-row">
+                    <div class="mids-col-md-9">
+                        <div class="mids-panel">
+                            <div class="mids-panel-heading mids-clearfix"> <a href="#" class="mids-fr mids-panel-more">更多</a>
+                                <h3 class="mids-panel-title">最新动态</h3>
+                            </div>
+                            <div class="mids-panel-body">
+                                <div class="mids-grid-list">
+                                    <div class="mids-row">
+                                        <div class="mids-col-md-4">
+                                            <div class="mids-grid-item">
+                                                <div class="item-thumb">
+                                                    <a href="#"><img src="__TMPL__Public/mala/images/demo-3x2.jpg">
+                                                    </a>
+                                                </div>
+                                                <p class="item-title"><a href="#">融云即时通讯云</a>
+                                                </p>
+                                                <p class="item-info">环信即时通讯云是移动即时通讯能力的云计算JPaaS </p>
+                                            </div>
+                                        </div>
+                                        <div class="mids-col-md-4">
+                                            <div class="mids-grid-item">
+                                                <p class="item-thumb">
+                                                    <a href="#"><img src="__TMPL__Public/mala/images/demo-3x2.jpg">
+                                                    </a>
+                                                </p>
+                                                <p class="item-title"><a href="#">融云即时通讯云</a>
+                                                </p>
+                                                <p class="item-info">环信即时通讯云是移动即时通讯能力的云计算JPaaS </p>
+                                            </div>
+                                        </div>
+                                        <div class="mids-col-md-4">
+                                            <div class="mids-grid-item">
+                                                <p class="item-thumb">
+                                                    <a href="#"><img src="__TMPL__Public/mala/images/demo-3x2.jpg">
+                                                    </a>
+                                                </p>
+                                                <p class="item-title"><a href="#">融云即时通讯云</a>
+                                                </p>
+                                                <p class="item-info">环信即时通讯云是移动即时通讯能力的云计算JPaaS </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mids-row">
+                                        <div class="mids-col-md-4">
+                                            <div class="mids-grid-item">
+                                                <div class="item-thumb">
+                                                    <a href="#"><img src="__TMPL__Public/mala/images/demo-3x2.jpg">
+                                                    </a>
+                                                </div>
+                                                <p class="item-title"><a href="#">融云即时通讯云</a>
+                                                </p>
+                                                <p class="item-info">环信即时通讯云是移动即时通讯能力的云计算JPaaS </p>
+                                            </div>
+                                        </div>
+                                        <div class="mids-col-md-4">
+                                            <div class="mids-grid-item">
+                                                <p class="item-thumb">
+                                                    <a href="#"><img src="__TMPL__Public/mala/images/demo-3x2.jpg">
+                                                    </a>
+                                                </p>
+                                                <p class="item-title"><a href="#">融云即时通讯云</a>
+                                                </p>
+                                                <p class="item-info">环信即时通讯云是移动即时通讯能力的云计算JPaaS </p>
+                                            </div>
+                                        </div>
+                                        <div class="mids-col-md-4">
+                                            <div class="mids-grid-item">
+                                                <p class="item-thumb">
+                                                    <a href="#"><img src="__TMPL__Public/mala/images/demo-3x2.jpg">
+                                                    </a>
+                                                </p>
+                                                <p class="item-title"><a href="#">融云即时通讯云</a>
+                                                </p>
+                                                <p class="item-info">环信即时通讯云是移动即时通讯能力的云计算JPaaS </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mids-col-md-3">
+                        <div class="mids-panel">
+                            <div class="mids-panel-heading mids-clearfix">
+                                <h3 class="mids-panel-title">推荐项目</h3>
+                            </div>
+                            <div class="mids-panel-body">
+                                <div class="mids-top10-list">
+                                    <div class="mids-top10-item mids-clearfix">
+                                        <div class="item-thumb">
+                                            <a href="#"><img src="__TMPL__Public/mala/images/demo-3x2.jpg">
+                                            </a>
+                                        </div>
+                                        <p><a href="#">环信即时通讯云</a>
+                                        </p>
+                                        <p><span>免费</span>
+                                        </p>
+                                    </div>
+                                    <div class="mids-top10-item">
+                                        <i class="mids-icon16 mids-icon16-list"></i> <a href="#">环信即时通讯云</a>
+                                        <span class="mids-fr">免费</span>
+                                    </div>
+                                    <div class="mids-top10-item">
+                                        <i class="mids-icon16 mids-icon16-list"></i> <a href="#">环信即时通讯云</a>
+                                        <span class="mids-fr">免费</span>
+                                    </div>
+                                    <div class="mids-top10-item">
+                                        <i class="mids-icon16 mids-icon16-list"></i> <a href="#">环信即时通讯云</a>
+                                        <span class="mids-fr">免费</span>
+                                    </div>
+                                    <div class="mids-top10-item">
+                                        <i class="mids-icon16 mids-icon16-list"></i> <a href="#">环信即时通讯云</a>
+                                        <span class="mids-fr">免费</span>
+                                    </div>
+                                    <div class="mids-top10-item">
+                                        <i class="mids-icon16 mids-icon16-list"></i> <a href="#">环信即时通讯云</a>
+                                        <span class="mids-fr">免费</span>
+                                    </div>
+                                    <div class="mids-top10-item">
+                                        <i class="mids-icon16 mids-icon16-list"></i> <a href="#">环信即时通讯云</a>
+                                        <span class="mids-fr">免费</span>
+                                    </div>
+                                    <div class="mids-top10-item">
+                                        <i class="mids-icon16 mids-icon16-list"></i> <a href="#">环信即时通讯云</a>
+                                        <span class="mids-fr">免费</span>
+                                    </div>
+                                    <div class="mids-top10-item">
+                                        <i class="mids-icon16 mids-icon16-list"></i> <a href="#">环信即时通讯云</a>
+                                        <span class="mids-fr color-danger">收费</span>
+                                    </div>
+                                    <div class="mids-top10-item">
+                                        <i class="mids-icon16 mids-icon16-list"></i> <a href="#">环信即时通讯云</a>
+                                        <span class="mids-fr">免费</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mids-figure">
+                <div class="mids-panel">
+                    <div class="mids-panel-heading mids-clearfix center">
+                        <h3 class="mids-panel-title">合作/案例</h3>
+                    </div>
+                    <div class="mids-panel-body">
+                        <div class="mids-grid-list">
+                            <div class="mids-row">
+                                <div class="mids-col-md-3">
+                                    <div class="mids-grid-item">
+                                        <p class="item-thumb">
+                                            <a href="#"><img src="__TMPL__Public/mala/images/demo-16x9.jpg">
+                                            </a>
+                                        </p>
+                                        <p class="item-info center">融云即时通讯云</p>
+                                    </div>
+                                </div>
+                                <div class="mids-col-md-3">
+                                    <div class="mids-grid-item">
+                                        <p class="item-thumb">
+                                            <a href="#"><img src="__TMPL__Public/mala/images/demo-16x9.jpg">
+                                            </a>
+                                        </p>
+                                        <p class="item-info center">融云即时通讯云</p>
+                                    </div>
+                                </div>
+                                <div class="mids-col-md-3">
+                                    <div class="mids-grid-item">
+                                        <p class="item-thumb">
+                                            <a href="#"><img src="__TMPL__Public/mala/images/demo-16x9.jpg">
+                                            </a>
+                                        </p>
+                                        <p class="item-info center">融云即时通讯云</p>
+                                    </div>
+                                </div>
+                                <div class="mids-col-md-3">
+                                    <div class="mids-grid-item">
+                                        <p class="item-thumb">
+                                            <a href="#"><img src="__TMPL__Public/mala/images/demo-16x9.jpg">
+                                            </a>
+                                        </p>
+                                        <p class="item-info center">融云即时通讯云</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<tc_include file="Public:footer"/>
+</div>
+
+
+<tc_include file="Public:scripts"/>
+
+
+
+
+
+</body>
+</html>

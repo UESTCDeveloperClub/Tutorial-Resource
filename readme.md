@@ -1,4 +1,4 @@
-#Lecture-Tutorial
+# Lecture-Tutorial
 
 - **前端开源resource和tutorial传送门**：见该仓库目录下的uestc-developerclub-fe文件夹
 
